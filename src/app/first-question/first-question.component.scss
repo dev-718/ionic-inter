@@ -1,0 +1,61 @@
+.wrapper {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+
+    p {
+        color: #FF8C00;
+    }
+
+    .rate-btn  {
+        --background: #FF8C00 !important;
+    }
+
+    .answer-btn {
+        width: 100%;
+        --border-radius: 8px;
+
+        &.btn1 {
+            --background: rgb(64, 64, 107);
+        }
+
+        &.btn2 {
+            --background: rgb(105, 105, 175);
+        }
+
+        &.btn3 {
+            --background: #DB282C;
+        }
+
+        &.btn4 {
+            --background: rgb(100, 97, 97);
+        }
+
+        &.btn5 {
+            --background: rgb(56, 55, 55);
+        }
+    }
+
+    .footer {
+        color: #FF8C00;
+        margin-top: 12px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .rating {
+            font-size: 14px;
+        }
+
+        .progress-bar {
+            width: 60%;
+            height: 8px;
+            border-radius: 3px;
+        }
+    }
+}

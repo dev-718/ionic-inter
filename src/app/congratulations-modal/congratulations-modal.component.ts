@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IonBadge, IonButton } from "@ionic/angular/standalone";
+import { Router } from '@angular/router';
+import { ModalController } from "@ionic/angular";
 
 @Component({
   selector: 'app-congratulations-modal',
@@ -8,8 +9,15 @@ import { IonBadge, IonButton } from "@ionic/angular/standalone";
 })
 export class CongratulationsModalComponent  implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalCtrl: ModalController,
+    private router: Router
+  ) { }
 
   ngOnInit() {}
 
+  public closeModal(): void {
+    this.modalCtrl.dismiss();
+    this.router.navigate(['/first']);
+  }
 }

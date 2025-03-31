@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 14px;
+    border-bottom: #e5e7eb solid 1px;
+
+    .btn {
+        --background: #FF8C00;
+        --border-radius: 8px;
+    }
+}
