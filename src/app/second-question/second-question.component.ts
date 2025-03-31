@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonButton, IonProgressBar } from "@ionic/angular/standalone";
 
 @Component({
@@ -9,8 +10,14 @@ import { IonButton, IonProgressBar } from "@ionic/angular/standalone";
 })
 export class SecondQuestionComponent  implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {}
+
+  public clickAnswer(): void {
+    this.router.navigate(['/third']);
+  }
 
 }
