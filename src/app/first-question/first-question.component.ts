@@ -1,27 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { IonProgressBar, IonButton } from "@ionic/angular/standalone";
+import { IonProgressBar, IonButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
-import { addIcons } from 'ionicons';
-import { thumbsUp, thumbsUpOutline, thumbsDown, thumbsDownOutline, help } from 'ionicons/icons';
+import { InterService } from '../services/inter/inter.service';
+import { ModalController } from '@ionic/angular';
+import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
 
 @Component({
   selector: 'app-first-question',
   templateUrl: './first-question.component.html',
   styleUrls: ['./first-question.component.scss'],
-  imports: [IonButton, IonProgressBar]
+  imports: [IonButton, IonProgressBar],
+  providers: [ModalController]
 })
 export class FirstQuestionComponent implements OnInit {
+  public balance: number = 0;
 
   constructor(
-    private router: Router
-  ) {
-    addIcons({ thumbsUp, thumbsUpOutline, thumbsDown, thumbsDownOutline, help });
+    private router: Router,
+    private interService: InterService,
+    private modalCtrl: ModalController
+  ) { }
+
+  ngOnInit() {
+    this.balance = this.interService.balance;
   }
 
-  ngOnInit() { }
-
-  public clickAnswer(): void {
-    this.router.navigate(['/second']);
+  public async addBalance(): Promise<void> {
+    this.interService.balance += 36.53;
+    const modal = await this.modalCtrl.create({
+      component: ConfirmModalComponent,
+      componentProps: {
+        amount: 36.53
+      }
+    });
+    modal.present();
+    setTimeout(() => {
+      modal.dismiss();
+      this.router.navigate(['/second']);
+    }, 3000);
   }
-
 }

@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+
+  .check-icon {
+    color: white;
+    font-size: 120px;
+  }
+
+  h1 {
+    color: white;
+    font-weight: 700;
+  }
+
+  p {
+    color: white;
+  }
+
+  span {
+    color: #db282c;
+  }
+}

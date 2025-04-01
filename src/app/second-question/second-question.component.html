@@ -1,14 +1,44 @@
 <div class="wrapper">
-  <img src="./assets/img/question_2.png" alt="question_1.png" height="200">
-  <ion-button size="large" shape="round">Avaliação: R$ 24,33</ion-button>
+  <img src="./assets/img/question_2.png" alt="question_1.png" height="200" />
+  <ion-button size="large" shape="round">Avaliação: R$ 24.33</ion-button>
   <p>Quão fácil foi para você abrir sua conta digital no Banco Inter?</p>
-  <ion-button class="answer-btn" shape="round" size="large" (click)="clickAnswer()">Muito Fácil</ion-button>
-  <ion-button class="answer-btn" shape="round" size="large" (click)="clickAnswer()">Fácil</ion-button>
-  <ion-button class="answer-btn" shape="round" size="large" (click)="clickAnswer()">Neutro</ion-button>
-  <ion-button class="answer-btn" shape="round" size="large" (click)="clickAnswer()">Difícil</ion-button>
-  <ion-button class="answer-btn" shape="round" size="large" (click)="clickAnswer()">Muito Difícil</ion-button>
+  <ion-button
+    class="answer-btn"
+    shape="round"
+    size="large"
+    (click)="addBalance()"
+    >Muito Fácil</ion-button
+  >
+  <ion-button
+    class="answer-btn"
+    shape="round"
+    size="large"
+    (click)="addBalance()"
+    >Fácil</ion-button
+  >
+  <ion-button
+    class="answer-btn"
+    shape="round"
+    size="large"
+    (click)="addBalance()"
+    >Neutro</ion-button
+  >
+  <ion-button
+    class="answer-btn"
+    shape="round"
+    size="large"
+    (click)="addBalance()"
+    >Difícil</ion-button
+  >
+  <ion-button
+    class="answer-btn"
+    shape="round"
+    size="large"
+    (click)="addBalance()"
+    >Muito Difícil</ion-button
+  >
   <div class="footer">
     <div>Avaliação 2/5</div>
-    <ion-progress-bar class="progress-bar" [value]="2/5"></ion-progress-bar>
+    <ion-progress-bar class="progress-bar" [value]="2 / 5"></ion-progress-bar>
   </div>
 </div>

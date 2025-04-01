@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonButton } from '@ionic/angular/standalone';
+import { InterService } from '../services/inter/inter.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,9 @@ import { IonButton } from '@ionic/angular/standalone';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public interService: InterService
+  ) { }
 
   ngOnInit() { }
 
