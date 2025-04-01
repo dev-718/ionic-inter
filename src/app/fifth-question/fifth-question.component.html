@@ -3,6 +3,7 @@
   <ion-button class="rate-btn" size="large" shape="round">Avaliação: R$ 127,54</ion-button>
   <p>Quais melhorias você gostaria de ver no Banco Inter?</p>
   <ion-textarea class="notepad" color="light" [rows]="4" fill="outline"></ion-textarea>
+  <ion-button class="submit-btn" size="large" shape="round" (click)="complete()">enviar</ion-button>
   <div class="footer">
     <div class="rating">Avaliação 5/5</div>
     <ion-progress-bar class="progress-bar" [value]="5/5"></ion-progress-bar>

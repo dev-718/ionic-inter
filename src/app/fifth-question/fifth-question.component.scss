@@ -6,7 +6,7 @@
   gap: 6px;
   text-align: center;
   padding: 14px;
-  padding-top: 82px;
+  padding-top: 90px;
 
   p {
     color: white;
@@ -15,6 +15,10 @@
   .rate-btn {
     --background: #f25e00 !important;
     margin-top: 12px;
+  }
+
+  .submit-btn {
+    width: 100%;
   }
 
   .notepad {

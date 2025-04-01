@@ -16,8 +16,8 @@ export class FifthQuestionComponent implements OnInit {
 
   ngOnInit() { }
 
-  public clickAnswer(): void {
-    this.router.navigate(['/fifth']);
+  public complete(): void {
+    this.router.navigate(['/completion']);
   }
 
 }

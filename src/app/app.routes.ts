@@ -26,6 +26,10 @@ export const routes: Routes = [
     loadComponent: () => import('./fifth-question/fifth-question.component').then((m) => m.FifthQuestionComponent),
   },
   {
+    path: 'completion',
+    loadComponent: () => import('./completion/completion.component').then((m) => m.CompletionComponent),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
