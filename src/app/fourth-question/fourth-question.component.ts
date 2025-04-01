@@ -8,13 +8,13 @@ import { IonButton, IonProgressBar } from "@ionic/angular/standalone";
   styleUrls: ['./fourth-question.component.scss'],
   imports: [IonProgressBar, IonButton]
 })
-export class FourthQuestionComponent  implements OnInit {
+export class FourthQuestionComponent implements OnInit {
 
   constructor(
     private router: Router
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   public clickAnswer(): void {
     this.router.navigate(['/fifth']);

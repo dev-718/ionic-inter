@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { IonicModule, ModalController } from '@ionic/angular';
 import { CongratulationsModalComponent } from '../congratulations-modal/congratulations-modal.component';
-import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonicModule, HeaderComponent],
+  imports: [IonicModule],
 })
 
 export class HomePage {

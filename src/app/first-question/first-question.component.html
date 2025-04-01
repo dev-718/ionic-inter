@@ -1,14 +1,24 @@
 <div class="wrapper">
   <img src="./assets/img/question_1.png" alt="question_1.png" height="200">
-  <ion-button class="rate-btn" shape="round">Avaliação: R$ 36,53</ion-button>
+  <ion-button size="large" shape="round">Avaliação: R$ 36,53</ion-button>
   <p>Como você avalia sua experiência geral com o Banco Inter?</p>
-  <ion-button class="answer-btn btn1" (click)="clickAnswer()">Muito Satisfeito</ion-button>
-  <ion-button class="answer-btn btn2" (click)="clickAnswer()">Satisfeito</ion-button>
-  <ion-button class="answer-btn btn3" (click)="clickAnswer()">Neutro</ion-button>
-  <ion-button class="answer-btn btn4" (click)="clickAnswer()">Insatisfeito</ion-button>
-  <ion-button class="answer-btn btn5" (click)="clickAnswer()">Muito Insatisfeito</ion-button>
+  <ion-button size="large" shape="round" class="answer-btn btn1" (click)="clickAnswer()">
+    Muito Satisfeito
+  </ion-button>
+  <ion-button size="large" shape="round" class="answer-btn btn2" (click)="clickAnswer()">
+    Satisfeito
+  </ion-button>
+  <ion-button size="large" shape="round" class="answer-btn btn3" (click)="clickAnswer()">
+    Neutro
+  </ion-button>
+  <ion-button size="large" shape="round" class="answer-btn btn4" (click)="clickAnswer()">
+    Insatisfeito
+  </ion-button>
+  <ion-button size="large" shape="round" class="answer-btn btn5" (click)="clickAnswer()">
+    Muito Insatisfeito
+  </ion-button>
   <div class="footer">
-    <div class="rating">Avaliação 1/5</div>
-    <ion-progress-bar class="progress-bar" [value]="1/5" color="warning"></ion-progress-bar>
+    <div>Avaliação 1/5</div>
+    <ion-progress-bar class="progress-bar" [value]="1/5"></ion-progress-bar>
   </div>
 </div>

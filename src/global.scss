@@ -11,6 +11,7 @@
 
 /* Core CSS required for Ionic components to work properly */
 @use "src/theme/font.scss";
+@use "./theme/variables.scss" as *;
 @import "@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
@@ -35,18 +36,35 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+@import "@ionic/angular/css/palettes/dark.system.css";
 
-body {
-    background-color: #FDFAEB;
-    font-family: Montserrat Alternates;
+$orange: #ED7000;
+
+body,
+.ion-page, .header {
+  background-color: #ff6e01;
+  overflow: auto;
+  font-family: Montserrat Alternates;
 }
 
-.ion-page {
-    position: relative;
+.native-textarea.sc-ion-textarea-md {
+  text-align: left;
+  color: white;
 }
 
-.content {
-    position: relative;
-    padding: 14px;
+ion-button {
+  --box-shadow: none;
+  color: white;
+  --background: #{$primary-color};
+}
+
+p {
+  font-size: 18px;
+}
+
+.progress-bar {
+  --background: #{$primary-color};
+  --progress-background: white;
+  border-radius: 5px;
+  height: 8px;
 }

@@ -1,0 +1,42 @@
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  padding: 14px;
+  padding-top: 82px;
+
+  p {
+    color: white;
+  }
+
+  .rate-btn {
+    --background: #f25e00 !important;
+    margin-top: 12px;
+  }
+
+  .notepad {
+    text-align: left;
+    --border-radius: 8px;
+    --border-color: white;
+  }
+
+  .footer {
+    color: white;
+    margin-top: 12px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .rating {
+      font-size: 14px;
+    }
+
+    .progress-bar {
+      width: 60%;
+    }
+  }
+}

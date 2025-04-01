@@ -1,49 +1,45 @@
 .wrapper {
+  height: 100%;
+  padding: 18px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: white;
+
+  .content {
     height: 100%;
-    padding: 18px;
     display: flex;
     flex-flow: column;
+    justify-content: center;
     align-items: center;
-    color: #FF8C00;
+    text-align: center;
+  }
 
-    .content {
-        flex: 1;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+  img {
+    padding-bottom: 12px;
+  }
 
-    img {
-        padding-bottom: 12px;
-    }
+  p {
+    font-size: 16px;
+  }
 
-    p {
-        font-size: 16px;
-    }
+  h2 {
+    font-weight: 700;
+  }
 
-    h2 {
-        font-weight: 700;
-    }
+  .amount {
+    color: #db282c;
+    font-size: 30px;
+    font-weight: 700;
+  }
 
-    .amount {
-        color: #DB282C;
-        font-size: 30px;
-        font-weight: 700;
-    }
+  .thank-you {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
 
-    .thank-you {
-        font-size: 12px;
-        margin-bottom: 24px;
-    }
-
-    button {
-        padding: 16px;
-        width: 100%;
-        background-color: #FF8C00;
-        color: white;
-        font-size: 18px;
-        border-radius: 8px;
-    }
+  .start-btn {
+    width: 100%;
+    --border-radius: 12px;
+  }
 }
