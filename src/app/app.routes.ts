@@ -34,6 +34,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pix-key-validation/pix-key-validation.component').then((m) => m.PixKeyValidationComponent),
   },
   {
+    path: 'receive-balance',
+    loadComponent: () => import('./receive-balance/receive-balance.component').then((m) => m.ReceiveBalanceComponent),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

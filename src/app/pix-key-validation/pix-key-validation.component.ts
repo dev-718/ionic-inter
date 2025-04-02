@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonButton, IonInput } from "@ionic/angular/standalone";
 
 @Component({
@@ -9,11 +10,13 @@ import { IonButton, IonInput } from "@ionic/angular/standalone";
 })
 export class PixKeyValidationComponent  implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {}
 
-  private validate(): void {
-
+  public validate(): void {
+    this.router.navigate(['receive-balance']);
   }
 }

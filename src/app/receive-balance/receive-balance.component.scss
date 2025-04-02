@@ -1,0 +1,32 @@
+@use './../../theme/variables.scss' as *;
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  padding: 14px;
+  padding-top: 120px;
+  color: white;
+
+  .check-icon {
+    font-size: 100px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .balance {
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: 36px;
+  }
+
+  .receive-btn {
+    width: 100%;
+  }
+}
