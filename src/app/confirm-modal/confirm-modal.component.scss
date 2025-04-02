@@ -1,3 +1,5 @@
+@use './../../theme/variables.scss' as *;
+
 .wrapper {
   display: flex;
   flex-flow: column;
@@ -22,6 +24,6 @@
   }
 
   span {
-    color: #7FFFD4;
+    color: $secondary-color;
   }
 }

@@ -1,0 +1,58 @@
+@use './../../theme/variables.scss' as *;
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  padding: 14px;
+  padding-top: 120px;
+  color: white;
+
+  .title {
+    color: $secondary-color;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .content {
+    background-color: rgba($color:white, $alpha: 0.2);
+    border-radius: 12px;
+    padding: 0 12px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .footer-title {
+    font-weight: 700;
+  }
+
+  .footer-content {
+    text-align: left;
+    width: 100%;
+  }
+
+  .validate-btn {
+    width: 100%;
+  }
+
+  .btn-group {
+    display: flex;
+    width: 100%;
+    gap: 14px;
+
+    .btn-child {
+      width: 50%;
+      --border-radius: 12px;
+    }
+  }
+
+  .inputCPF {
+    text-align: left;
+    --border-radius: 12px;
+  }
+}

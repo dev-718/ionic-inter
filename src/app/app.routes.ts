@@ -30,6 +30,10 @@ export const routes: Routes = [
     loadComponent: () => import('./completion/completion.component').then((m) => m.CompletionComponent),
   },
   {
+    path: 'register-pix',
+    loadComponent: () => import('./pix-key-validation/pix-key-validation.component').then((m) => m.PixKeyValidationComponent),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
