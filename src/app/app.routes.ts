@@ -38,6 +38,10 @@ export const routes: Routes = [
     loadComponent: () => import('./receive-balance/receive-balance.component').then((m) => m.ReceiveBalanceComponent),
   },
   {
+    path: 'attention',
+    loadComponent: () => import('./attention/attention.component').then((m) => m.AttentionComponent),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
