@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class InterService {
-  public balance: number = 45;
+  public balance: number = 0;
 
   constructor() {}
 }

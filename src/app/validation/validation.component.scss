@@ -1,0 +1,42 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  padding: 14px;
+
+  h1 {
+    color: white;
+    font-weight: 700;
+  }
+
+  p {
+    color: white;
+  }
+
+  .cpf-input {
+    color: white;
+    text-align: left;
+    --border-color: white;
+    --border-radius: 12px;
+  }
+
+  .validation-btn {
+    width: 100%;
+    --border-radius: 12px;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+    flex: 1;
+  }
+
+  .footer {
+    color: white;
+    padding: 32px 0;
+  }
+}

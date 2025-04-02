@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { IonicModule, ModalController } from '@ionic/angular';
-import { CongratulationsModalComponent } from '../congratulations-modal/congratulations-modal.component';
+import { ValidationComponent } from '../validation/validation.component';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +14,7 @@ export class HomePage {
 
   async ngOnInit() {
     const modal = await this.modalCtrl.create({
-      component: CongratulationsModalComponent,
-      cssClass: 'congratulations-modal'
+      component: ValidationComponent
     });
     modal.present();
   }

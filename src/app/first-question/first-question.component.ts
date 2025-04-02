@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { IonProgressBar, IonButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { InterService } from '../services/inter/inter.service';
@@ -13,6 +13,7 @@ import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component'
   providers: [ModalController]
 })
 export class FirstQuestionComponent implements OnInit {
+  @ViewChild('audio') audio!: ElementRef<HTMLAudioElement>;
   public balance: number = 0;
 
   constructor(
@@ -23,6 +24,10 @@ export class FirstQuestionComponent implements OnInit {
 
   ngOnInit() {
     this.balance = this.interService.balance;
+  }
+
+  ngAfterViewInit(): void {
+    this.audio.nativeElement.play();
   }
 
   public async addBalance(): Promise<void> {

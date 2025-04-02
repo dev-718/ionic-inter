@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonButton } from "@ionic/angular/standalone";
+import { InterService } from '../services/inter/inter.service';
 
 @Component({
   selector: 'app-completion',
@@ -9,7 +10,9 @@ import { IonButton } from "@ionic/angular/standalone";
 })
 export class CompletionComponent  implements OnInit {
 
-  constructor() { }
+  constructor(
+    public interService: InterService
+  ) { }
 
   ngOnInit() {}
 
