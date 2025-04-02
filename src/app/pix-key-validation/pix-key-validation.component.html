@@ -14,9 +14,54 @@
   <div class="footer-title">CADASTRE SUA CHAVE PIX AGORA! 👇</div>
   <div class="footer-content">Escolha o tipo da sua chave Pix</div>
   <div class="btn-group">
-    <ion-button disabled size="large" class="btn-child">CPF</ion-button>
-    <ion-button size="large" class="btn-child">TELEFONE</ion-button>
+    <ion-button
+      [class]="
+        validationFormGroup.value.type === 'cpf' ? 'active' : 'disable'
+      "
+      size="large"
+      class="btn-child"
+      (click)="setType('cpf')"
+    >
+      CPF
+    </ion-button>
+    <ion-button
+      [class]="validationFormGroup.value.type === 'phone' ? 'active' : 'disable'"
+      size="large"
+      class="btn-child"
+      (click)="setType('phone')"
+    >
+      TELEFONE
+    </ion-button>
   </div>
-  <ion-input class="inputCPF" fill="outline" color="light" placeholder="Ex.: 000.000.000.-00"></ion-input>
-  <ion-button shape="round" size="large" class="validate-btn" (click)="validate()">Validar minha chave Pix</ion-button>
+  <form [formGroup]="validationFormGroup" class="validation-form">
+    <ion-input
+      *ngIf="validationFormGroup.value.type === 'cpf'"
+      formControlName="cpf"
+      class="input-cpf"
+      fill="outline"
+      color="light"
+      [maskito]="cpfMask"
+      [maskitoElement]="maskPredicate"
+      placeholder="Ex.: 000.000.000.-00"
+    ></ion-input>
+    <ion-input
+      *ngIf="validationFormGroup.value.type === 'phone'"
+      formControlName="phone"
+      class="input-cpf"
+      fill="outline"
+      color="light"
+      [maskito]="phoneMask"
+      [maskitoElement]="maskPredicate"
+      placeholder="Ex.: (00) 00000-00000"
+    ></ion-input>
+    <ion-button
+      [disabled]="validationFormGroup.invalid"
+      shape="round"
+      size="large"
+      class="validate-btn"
+      (click)="validate()"
+    >
+      Validar minha chave Pix
+    </ion-button>
+  </form>
 </div>

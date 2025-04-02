@@ -1,4 +1,4 @@
-@use './../../theme/variables.scss' as *;
+@use "./../../theme/variables.scss" as *;
 
 .wrapper {
   flex: 1;
@@ -18,7 +18,7 @@
   }
 
   .content {
-    background-color: rgba($color:white, $alpha: 0.2);
+    background-color: rgba($color: white, $alpha: 0.2);
     border-radius: 12px;
     padding: 0 12px;
 
@@ -38,6 +38,7 @@
 
   .validate-btn {
     width: 100%;
+    margin-top: 24px;
   }
 
   .btn-group {
@@ -51,8 +52,16 @@
     }
   }
 
-  .inputCPF {
+  .input-cpf {
     text-align: left;
     --border-radius: 12px;
+  }
+
+  .disable {
+    opacity: 0.5;
+  }
+
+  .validation-form {
+    width: 100%;
   }
 }
