@@ -7,6 +7,7 @@ import { ValidationComponent } from '../validation/validation.component';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   imports: [IonicModule],
+  providers: [ModalController]
 })
 
 export class HomePage {

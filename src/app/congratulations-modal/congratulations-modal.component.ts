@@ -8,7 +8,8 @@ import { InterService } from '../services/inter/inter.service';
   selector: 'app-congratulations-modal',
   templateUrl: './congratulations-modal.component.html',
   styleUrls: ['./congratulations-modal.component.scss'],
-  imports: [IonButton]
+  imports: [IonButton],
+  providers: [ModalController]
 })
 export class CongratulationsModalComponent implements OnInit {
 

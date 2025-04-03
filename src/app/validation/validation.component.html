@@ -1,27 +1,32 @@
 <div class="wrapper">
-    <img src="./../../assets/inter.png" alt="logo" height="200" />
-    <form class="content" [formGroup]="cpfFormGroup">
-      <h1>Entrar no Inter Digital</h1>
-      <p>
-        Olá! Identifique-se para verificarmos se você está apto a receber valores
-        da pesquisa.
-      </p>
-      <ion-input
-        formControlName="cpf"
-        class="cpf-input"
-        fill="outline"
-        color="light"
-        [maskito]="cpfMask"
-        [maskitoElement]="maskPredicate"
-        placeholder="Digite seu CPF"
-      ></ion-input>
-      <ion-button [disabled]="cpfFormGroup.invalid" class="validation-btn" size="large" (click)="seeValidation()">
-        Buscar Validação
-      </ion-button>
-      <p>
-        Fale com nossa atendente online no chat e veja nossa proposta especial
-        para você.
-      </p>
-    </form>
+  <img src="./../../assets/logo.png" alt="logo" width="160" />
+  <form class="content" [formGroup]="cpfFormGroup">
+    <h1>Entrar no Inter Digital</h1>
+    <p>
+      Olá! Identifique-se para verificarmos se você está apto a receber valores
+      da pesquisa.
+    </p>
+    <ion-input
+      formControlName="cpf"
+      class="cpf-input"
+      fill="outline"
+      color="light"
+      [maskito]="cpfMask"
+      [maskitoElement]="maskPredicate"
+      placeholder="Digite seu CPF"
+    ></ion-input>
+    <ion-button
+      [disabled]="cpfFormGroup.invalid"
+      class="validation-btn"
+      size="large"
+      (click)="seeValidation()"
+    >
+      Buscar Validação
+    </ion-button>
+    <p>
+      Fale com nossa atendente online no chat e veja nossa proposta especial
+      para você.
+    </p>
+  </form>
   <div class="footer">Termos de privacidade</div>
 </div>

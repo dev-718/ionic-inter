@@ -12,6 +12,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   templateUrl: './validation.component.html',
   styleUrls: ['./validation.component.scss'],
   imports: [IonInput, IonButton, MaskitoDirective, ReactiveFormsModule],
+  providers: [ModalController]
 })
 export class ValidationComponent implements OnInit {
   readonly maskPredicate: MaskitoElementPredicate = async element => (element as HTMLIonInputElement).getInputElement();
@@ -43,6 +44,6 @@ export class ValidationComponent implements OnInit {
     setTimeout(() => {
       loadingModal.dismiss();
       congratulationsModal.present();
-    }, 8000);
+    }, 5000);
   }
 }
