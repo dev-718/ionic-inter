@@ -4,12 +4,13 @@ import { Router } from '@angular/router';
 import { InterService } from '../services/inter/inter.service';
 import { ModalController } from '@ionic/angular';
 import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
+import { BrazilNumberFormatPipe } from '../brazil-number-format.pipe';
 
 @Component({
   selector: 'app-first-question',
   templateUrl: './first-question.component.html',
   styleUrls: ['./first-question.component.scss'],
-  imports: [IonButton, IonProgressBar],
+  imports: [IonButton, IonProgressBar, BrazilNumberFormatPipe],
   providers: [ModalController]
 })
 export class FirstQuestionComponent implements OnInit {

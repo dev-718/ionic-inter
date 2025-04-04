@@ -4,12 +4,13 @@ import { IonButton, IonProgressBar } from '@ionic/angular/standalone';
 import { InterService } from '../services/inter/inter.service';
 import { ModalController } from '@ionic/angular';
 import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
+import { BrazilNumberFormatPipe } from '../brazil-number-format.pipe';
 
 @Component({
   selector: 'app-fourth-question',
   templateUrl: './fourth-question.component.html',
   styleUrls: ['./fourth-question.component.scss'],
-  imports: [IonProgressBar, IonButton],
+  imports: [IonProgressBar, IonButton, BrazilNumberFormatPipe],
   providers: [ModalController],
 })
 export class FourthQuestionComponent implements OnInit {
@@ -22,9 +23,7 @@ export class FourthQuestionComponent implements OnInit {
   ngOnInit() {}
 
   public async addBalance(): Promise<void> {
-    this.interService.balance = Number(
-      (this.interService.balance + 51.12).toFixed(2)
-    );
+    this.interService.balance += 51.12;
     const modal = await this.modalCtrl.create({
       component: ConfirmModalComponent,
       componentProps: {

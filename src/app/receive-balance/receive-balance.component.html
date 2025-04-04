@@ -4,7 +4,7 @@
   <div>Sua chave Pix foi validada com sucesso.</div>
   <div>Você receberá um Pix teste</div>
   <div>de R$ 0,10 em instantes.</div>
-  <div class="balance">R$ {{ interService.balance }}</div>
+  <div class="balance">R$ {{ interService.balance | brazilNumberFormat }}</div>
   <div>
     Seu saldo será convertido e enviado para sua chave Pix em até 24 horas.
   </div>

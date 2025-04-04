@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
 import { InterService } from '../services/inter/inter.service';
+import { BrazilNumberFormatPipe } from '../brazil-number-format.pipe';
 
 @Component({
   selector: 'app-fifth-question',
   templateUrl: './fifth-question.component.html',
   styleUrls: ['./fifth-question.component.scss'],
-  imports: [IonButton, IonProgressBar, IonTextarea],
+  imports: [IonButton, IonProgressBar, IonTextarea, BrazilNumberFormatPipe],
   providers: [ModalController],
 })
 export class FifthQuestionComponent implements OnInit {
