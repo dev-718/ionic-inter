@@ -7,15 +7,14 @@ import { ValidationComponent } from '../validation/validation.component';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   imports: [IonicModule],
-  providers: [ModalController]
+  providers: [ModalController],
 })
-
 export class HomePage {
-  private modalCtrl = inject(ModalController);
+  constructor(private modalCtrl: ModalController) {}
 
   async ngOnInit() {
     const modal = await this.modalCtrl.create({
-      component: ValidationComponent
+      component: ValidationComponent,
     });
     modal.present();
   }
