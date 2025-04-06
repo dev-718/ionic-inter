@@ -1,21 +1,18 @@
-import { Component, inject } from '@angular/core';
-import { IonicModule, ModalController } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { ValidationComponent } from '../validation/validation.component';
+import { DialogService } from '@ngneat/dialog';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   imports: [IonicModule],
-  providers: [ModalController],
 })
 export class HomePage {
-  constructor(private modalCtrl: ModalController) {}
+  constructor(private dialogService: DialogService) {}
 
-  async ngOnInit() {
-    const modal = await this.modalCtrl.create({
-      component: ValidationComponent,
-    });
-    modal.present();
+  ngOnInit() {
+    this.dialogService.open(ValidationComponent);
   }
 }

@@ -2,38 +2,35 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonButton, IonProgressBar } from '@ionic/angular/standalone';
 import { InterService } from '../services/inter/inter.service';
-import { ModalController } from '@ionic/angular';
 import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
 import { BrazilNumberFormatPipe } from '../brazil-number-format.pipe';
+import { DialogService } from '@ngneat/dialog';
 
 @Component({
   selector: 'app-second-question',
   templateUrl: './second-question.component.html',
   styleUrls: ['./second-question.component.scss'],
   imports: [IonProgressBar, IonButton, BrazilNumberFormatPipe],
-  providers: [ModalController],
 })
 export class SecondQuestionComponent implements OnInit {
   constructor(
     private router: Router,
     private interService: InterService,
-    private modalCtrl: ModalController
+    private dialogService: DialogService
   ) {}
 
   ngOnInit() {}
 
-  public async addBalance(): Promise<void> {
+  public addBalance(): void {
     this.interService.balance += 24.33;
-    const modal = await this.modalCtrl.create({
-      component: ConfirmModalComponent,
-      componentProps: {
+    this.dialogService.open(ConfirmModalComponent, {
+      data: {
         amount: 24.33,
       },
     });
-    modal.present();
     setTimeout(() => {
-      modal.dismiss();
       this.router.navigate(['/third']);
+      this.dialogService.closeAll();
     }, 3000);
   }
 }

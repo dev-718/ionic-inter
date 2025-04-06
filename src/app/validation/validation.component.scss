@@ -41,3 +41,13 @@
     padding: 32px 0;
   }
 }
+
+.inter {
+  height: 100vh;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

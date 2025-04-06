@@ -66,3 +66,22 @@ p {
   border-radius: 5px;
   height: 8px;
 }
+
+.ngneat-dialog-content {
+  display: block !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute !important;
+  border-radius: 0 !important;
+  background: #ff6b00 !important;
+  animation: none !important;
+  overflow: auto !important;
+}
+
+.ngneat-dialog-backdrop {
+  animation: none !important;
+}
+
+.ngneat-close-dialog {
+  display: none !important;
+}

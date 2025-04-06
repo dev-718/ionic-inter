@@ -1,4 +1,3 @@
-import { ModalController } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MaskitoDirective } from '@maskito/angular';
@@ -12,6 +11,7 @@ import { Router } from '@angular/router';
 import { IonButton, IonInput } from '@ionic/angular/standalone';
 import { MaskitoOptions, MaskitoElementPredicate } from '@maskito/core';
 import { LoadingComponent } from '../loading/loading.component';
+import { DialogService } from '@ngneat/dialog';
 
 @Component({
   selector: 'app-pix-key-validation',
@@ -24,7 +24,6 @@ import { LoadingComponent } from '../loading/loading.component';
     ReactiveFormsModule,
     MaskitoDirective,
   ],
-  providers: [ModalController]
 })
 export class PixKeyValidationComponent implements OnInit {
   public validationFormGroup!: FormGroup;
@@ -70,7 +69,7 @@ export class PixKeyValidationComponent implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private modalCtrl: ModalController
+    private dialogService: DialogService
   ) {}
 
   ngOnInit() {
@@ -88,12 +87,9 @@ export class PixKeyValidationComponent implements OnInit {
   }
 
   public async validate(): Promise<void> {
-    const modal = await this.modalCtrl.create({
-      component: LoadingComponent,
-    });
-    modal.present();
+    this.dialogService.open(LoadingComponent);
     setTimeout(() => {
-      modal.dismiss();
+      this.dialogService.closeAll();
       this.router.navigate(['receive-balance']);
     }, 5000);
   }

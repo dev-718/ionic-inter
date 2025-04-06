@@ -1,4 +1,8 @@
-<div class="wrapper">
+<div class="inter" *ngIf="loading">
+  <img src="./../../assets/img/inter.gif" alt="inter" />
+</div>
+
+<div *ngIf="!loading" class="wrapper">
   <img src="./../../assets/logo.png" alt="logo" width="160" />
   <form class="content" [formGroup]="cpfFormGroup">
     <h1>Entrar no Inter Digital</h1>
