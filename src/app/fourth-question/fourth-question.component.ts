@@ -30,7 +30,9 @@ export class FourthQuestionComponent implements OnInit {
     });
     setTimeout(() => {
       this.router.navigate(['/fifth']);
-      this.dialogService.closeAll();
+      setTimeout(() => {
+        this.dialogService.closeAll();
+      }, 100);
     }, 3000);
   }
 }

@@ -33,7 +33,7 @@ export class ValidationComponent implements OnInit {
     })
     setTimeout(() => {
       this.loading = false;
-    }, 2000);
+    }, 2000); 
   }
 
   public seeValidation(): void {
