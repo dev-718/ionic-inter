@@ -29,7 +29,7 @@ export class ThirdQuestionComponent implements OnInit {
       },
     });
     setTimeout(() => {
-      this.router.navigate(['/fourth']);
+      this.router.navigateByUrl('/fourth', { replaceUrl: true });
       setTimeout(() => {
         this.dialogService.closeAll();
       }, 100);

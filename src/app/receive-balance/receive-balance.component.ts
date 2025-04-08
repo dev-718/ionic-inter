@@ -23,6 +23,6 @@ export class ReceiveBalanceComponent implements OnInit {
   ngOnInit() {}
 
   public receive(): void {
-    this.router.navigate(['attention']);
+    this.router.navigateByUrl('/attention', { replaceUrl: true });
   }
 }

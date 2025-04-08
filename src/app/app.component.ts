@@ -10,10 +10,4 @@ import { HeaderComponent } from "./header/header.component";
 })
 export class AppComponent {
   constructor() {}
-
-  ngOnInit() {
-    window.onpopstate = () => {
-      history.go(1); // Prevent back navigation
-    };
-  }
 }

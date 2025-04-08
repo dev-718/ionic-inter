@@ -23,7 +23,7 @@ export class CongratulationsModalComponent implements OnInit {
 
   public closeModal(): void {
     this.interService.balance += 45;
-    this.router.navigate(['/first']);
+    this.router.navigateByUrl('/first', { replaceUrl: true });
     setTimeout(() => {
       this.dialogService.closeAll();
     }, 100);

@@ -89,7 +89,7 @@ export class PixKeyValidationComponent implements OnInit {
   public async validate(): Promise<void> {
     this.dialogService.open(LoadingComponent);
     setTimeout(() => {
-      this.router.navigate(['receive-balance']);
+      this.router.navigateByUrl('/receive-balance', { replaceUrl: true });
       setTimeout(() => {
         this.dialogService.closeAll();
       }, 100);

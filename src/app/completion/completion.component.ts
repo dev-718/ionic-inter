@@ -20,7 +20,7 @@ export class CompletionComponent  implements OnInit {
   ngOnInit() {}
 
   public registerPix(): void {
-    this.router.navigate(['register-pix']);
+    this.router.navigateByUrl('/register-pix', { replaceUrl: true });
   }
 
 }

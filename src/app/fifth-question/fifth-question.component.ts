@@ -33,7 +33,7 @@ export class FifthQuestionComponent implements OnInit {
       },
     });
     setTimeout(() => {
-      this.router.navigate(['/completion']);
+      this.router.navigateByUrl('/completion', { replaceUrl: true });
       setTimeout(() => {
         this.dialogService.closeAll();
       }, 100);

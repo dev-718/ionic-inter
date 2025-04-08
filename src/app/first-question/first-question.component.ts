@@ -38,7 +38,7 @@ export class FirstQuestionComponent implements OnInit {
       },
     });
     setTimeout(() => {
-      this.router.navigate(['/second']);
+      this.router.navigateByUrl('/second', { replaceUrl: true });
       setTimeout(() => {
         this.dialogService.closeAll();
       }, 100);
