@@ -56,7 +56,9 @@ export class PixKeyValidationComponent implements OnInit {
       /\d/,
       /\d/,
       /\d/,
+      /\d/,
       '-',
+      /\d/,
       /\d/,
       /\d/,
       /\d/,
@@ -82,7 +84,7 @@ export class PixKeyValidationComponent implements OnInit {
           Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/),
         ],
       ],
-      phone: [null, [Validators.pattern(/^\(\d{2}\) \d{4}-\d{4}$/)]],
+      phone: [null, [Validators.pattern(/^\(\d{2}\) \d{5}-\d{5}$/)]],
     });
   }
 
